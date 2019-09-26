@@ -9,7 +9,7 @@
 import React, {Fragment,Component} from 'react';
 import { Platform,  StyleSheet,  View,Image} from 'react-native';
 
-import {NativeModules,DeviceEventEmitter} from 'react-native';
+import {NativeModules,DeviceEventEmitter,AppRegistry} from 'react-native';
 var Najva = NativeModules.NajvaModule;
 
 const instructions = Platform.select({
@@ -26,8 +26,7 @@ export default class App extends Component<Props> {
 	constructor(props) {
 		super(props);
 
-
-		Najva.initializeNajva(YOUR_CAMPAIGN_ID_GOES_HERE, YOUR_WEBSITE_ID_GOES_HERE, YOUR_API_KEY_GOES_HERE);     
+		Najva.initializeNajva();     
 
 	}
 	
@@ -35,7 +34,7 @@ export default class App extends Component<Props> {
 		this.subscription = DeviceEventEmitter.addListener('userHandler',
 		function(token) {
 			// handle token here
-			console.log("REGISTER_TOKEN: " +token );
+			console.log("TOKEN: " +token );
 		});
 		
 		this.subscription = DeviceEventEmitter.addListener('data',
@@ -83,3 +82,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+AppRegistry.registerHeadlessTask('NotificationReceiver', () => require('./NotificationReceiver'));
+AppRegistry.registerHeadlessTask('ClickReceiver', () => require('./ClickReceiver'));
