@@ -161,7 +161,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.facebook.react:react-native:+'
     // From node_modules
-    implementation 'com.najva.sdk:najva-reactnative-plugin:1.2.1'
+    implementation 'com.najva.sdk:najva-reactnative-plugin:1.2.3'
     // JSC from node_modules
     if (useIntlJsc) {
         implementation 'org.webkit:android-jsc-intl:+'

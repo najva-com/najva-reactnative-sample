@@ -26,7 +26,7 @@ export default class App extends Component<Props> {
 	constructor(props) {
 		super(props);
 
-		Najva.initializeNajva();     
+		Najva.initializeNajva(true);     // true : Enable Najva Location Service
 
 	}
 	
