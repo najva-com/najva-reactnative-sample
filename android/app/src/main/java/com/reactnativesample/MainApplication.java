@@ -12,7 +12,7 @@ import com.facebook.soloader.SoLoader;
 import java.util.Arrays;
 import java.util.List;
 
-import ir.najva.najvasdk.reactnativeplugin.CustomPackage;
+import ir.najva.najvasdk.reactnativeplugin.NajvaPackage;
 
 
 public class MainApplication extends Application implements ReactApplication {
