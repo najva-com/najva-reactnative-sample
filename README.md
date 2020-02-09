@@ -23,7 +23,10 @@ put `websiteId` , `apiKey` here!
 
 5. Go to `App.js` file and put this parameters in `initializeNajva` method that looks like the following then save it.
 ```
-  Najva.initializeNajva();     
+  Najva.initializeNajva(true);     //true:enable Najva Location Service - false:disable Najva Location Service
 ```
 6.  Now you can run application and send notification from your panel to it!
+````
+Notice: npm install can be usefull for some error
+````
 
