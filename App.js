@@ -37,14 +37,15 @@ export default class App extends Component<Props> {
 			console.log("TOKEN: " +token );
 		});
 		
-		this.subscription = DeviceEventEmitter.addListener('data',
-		function(data){
-			// access data 
-			console.log("DATA: " +data);
-		});
 		Najva.getSubscribedToken(function(token){
 			console.log(token);
 		});
+                Najva.setReceiveNotificationListener(function(notificationId) {
+     			console.log("notificationId: ", notificationId);
+    		});
+    		Najva.setNotificationClickListener(function(notificationId, buttonId) {
+     			 console.log("notificationId: ", notificationId, buttonId);
+    		});
 	}
 
 		
@@ -83,5 +84,3 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerHeadlessTask('NotificationReceiver', () => require('./NotificationReceiver'));
-AppRegistry.registerHeadlessTask('ClickReceiver', () => require('./ClickReceiver'));
