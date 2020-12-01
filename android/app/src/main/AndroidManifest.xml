@@ -21,8 +21,6 @@
         </intent-filter>
       </activity>
         <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-        <meta-data android:name="com.najva.sdk.metadata.API_KEY" android:value="c1c8914f-744b-425e-a6e4-6be835a1952b"/>
-        <meta-data android:name="com.najva.sdk.metadata.WEBSITE_ID" android:value="5919"/>
     </application>
 
 </manifest>
