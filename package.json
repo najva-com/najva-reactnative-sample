@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "scripts": {
     "start": "react-native start",
+    "android": "react-native run-android",
     "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
-    "react": "16.8.6",
-    "react-native": "0.60.0"
+    "react": "16.13.1",
+    "react-native": "^0.63.3",
+    "react-native-najva": "^1.2.16"
   },
   "devDependencies": {
     "@babel/core": "7.5.0",
