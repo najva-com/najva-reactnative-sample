@@ -28,11 +28,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
 
-
-    console.log("modules");
-    console.log(NativeModules);
-
-    NativeModules.NajvaModule.initializeNajva("8b84ad3a-3daa-4520-9adc-d7528ea95a54", 12383, false);// true : Enable Najva Location Service
+    NativeModules.NajvaModule.initializeNajva("8b84ad3a-3daa-4520-9adc-d7528ea95a54", 12383, false, false);// true : Enable Najva Location Service
 
     this.componentDidMount = this.componentDidMount.bind(this);
     this.updateToken = this.updateToken.bind(this);
